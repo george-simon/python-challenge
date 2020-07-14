@@ -23,14 +23,15 @@ with open(election_dataPath, newline='') as csvfile :
         vote_counter[i] = vote_counter.get(i, 0) + 1
 
      # A complete list of candidates who received votes   
-    print(vote_counter)  
-
-
+    print(vote_counter)
+    #change O'Tooley  
+    vote_counter["OTooley"] = vote_counter.pop("O'Tooley")
+    
     #calculate percentages
     percentage_K = (vote_counter.get("Khan") / len(votes)) *100
     percentage_O = (vote_counter.get("Correy") / len(votes)) *100
     percentage_L = (vote_counter.get("Li") / len(votes)) *100
-    percentage_C = (vote_counter.get("O'Tooley") / len(votes)) *100
+    percentage_C = (vote_counter.get("OTooley") / len(votes)) *100
 
     #Print Output
     print(f"Election Results \n----------------------------")
@@ -41,7 +42,7 @@ with open(election_dataPath, newline='') as csvfile :
     print(f"Khan: {round(percentage_K,2)}% {vote_counter.get('Khan')}")
     print(f"Correy: {round(percentage_O,2)}% {vote_counter.get('Correy')}")
     print(f"Li: {round(percentage_L,2)}% {vote_counter.get('Li')}")
-    # print(f""O'Tooley: {round(percentage_C,2)}% {vote_counter.get("O'Tooley")}"")
+    print(f"O'Tooley: {round(percentage_C,2)}% {vote_counter.get('OTooley')}")
 
     # The winner of the election based on popular vote.
     #extract the winner with the most votes out of the dictionary
