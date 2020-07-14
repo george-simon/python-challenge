@@ -1,6 +1,7 @@
 #Start by pulling the csv file in and read
 import os
 import csv
+import sys
 
 election_dataPath = os.path.join("Resources","election_data.csv")
 
@@ -37,7 +38,7 @@ with open(election_dataPath, newline='') as csvfile :
     print(f"Election Results \n----------------------------")
     print(f"Total Votes: {len(votes)}")
     print(f"\n----------------------------")
-    
+                
     # Print The total number of votes each candidate won & percentage
     print(f"Khan: {round(percentage_K,2)}% {vote_counter.get('Khan')}")
     print(f"Correy: {round(percentage_O,2)}% {vote_counter.get('Correy')}")
@@ -51,5 +52,31 @@ with open(election_dataPath, newline='') as csvfile :
         #  b) return the key with the max value"""  
     v=list(vote_counter.values())
     k=list(vote_counter.keys())
-    print(f"The winner is: {k[v.index(max(v))]}")
+    print(f"The winner is: {k[v.index(max(v))]}")        
 
+
+    #export into txt file
+    #https://stackoverflow.com/questions/13794873/how-to-export-all-print-to-a-txt-file-in-python
+    sys.stdout = open('analysis_output.txt', 'w')
+
+    #Print Output
+    print(f"Election Results \n----------------------------")
+    print(f"Total Votes: {len(votes)}")
+    print(f"\n----------------------------")
+                
+    # Print The total number of votes each candidate won & percentage
+    print(f"Khan: {round(percentage_K,2)}% {vote_counter.get('Khan')}")
+    print(f"Correy: {round(percentage_O,2)}% {vote_counter.get('Correy')}")
+    print(f"Li: {round(percentage_L,2)}% {vote_counter.get('Li')}")
+    print(f"O'Tooley: {round(percentage_C,2)}% {vote_counter.get('OTooley')}")
+
+    # The winner of the election based on popular vote.
+    #extract the winner with the most votes out of the dictionary
+    #https://stackoverflow.com/questions/268272/getting-key-with-maximum-value-in-dictionary
+        #  a) create a list of the dict's keys and values; 
+        #  b) return the key with the max value"""  
+    v=list(vote_counter.values())
+    k=list(vote_counter.keys())
+    print(f"The winner is: {k[v.index(max(v))]}")           
+
+    sys.stdout.close()

@@ -3,6 +3,7 @@
 import os
 import csv
 import statistics
+import sys
 
 budget_dataPath = os.path.join("Resources","budget_data.csv")
 
@@ -43,3 +44,22 @@ with open(budget_dataPath, newline='') as csvfile :
     
     # The greatest decrease in losses (date and amount) over the entire period
     print(f"Greatest Decrease in Profits: {min(diff_revenue)}")
+
+
+    #export into txt file
+    #https://stackoverflow.com/questions/13794873/how-to-export-all-print-to-a-txt-file-in-python
+    sys.stdout = open('analysis_output.txt', 'w')
+
+    #Print out analysis
+    print(f"Financial Analysis \n----------------------------")
+    print(f"Number of Months: {len(months)}") #total months or rows counted
+    print(f"Net Total: ${sum(revenue)}") #total months or rows counted
+    print(f"Average of Change: ${round(avg_change, 2)}") #average change rounded two decimals
+
+    # The greatest increase in profits (date and amount) over the entire period
+    print(f"Greatest Increase in Profits: {max(diff_revenue)}")
+    
+    # The greatest decrease in losses (date and amount) over the entire period
+    print(f"Greatest Decrease in Profits: {min(diff_revenue)}")
+
+    sys.stdout.close()
