@@ -15,7 +15,7 @@ The task was to create Python script that analyzes the records to calculate each
 * In addition, the final script should both print the analysis to the terminal and export a text file with the results.
 
 ## PyPoll
-During the second part of the challenege I was given poll data called election_data.csv. The dataset was composed of three columns: Voter ID, County, and Candidate. My task was to create a Python script that analyzes the votes and calculates each of the following:
+During the second part of the challenge I was given poll data called election_data.csv. The dataset was composed of three columns: Voter ID, County, and Candidate. My task was to create a Python script that analyzes the votes and calculates each of the following:
 * The total number of votes cast
 * A complete list of candidates who received votes
 * The percentage of votes each candidate won
