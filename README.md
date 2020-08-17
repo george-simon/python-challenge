@@ -1,4 +1,4 @@
-# python-challenge
+# Python-Coding
 
 ## Background
 Both of these challenges encompasses a real-world situation in analyzing banking data and helping a small, rural town modernize its vote counting process
