@@ -4,7 +4,7 @@
 Both of these challenges encompass a real-world situation in analyzing banking data and helping a rural town modernize its vote counting process.
 
 ### Part I - PyBank
-During part one I was tasked with creating a Python script for analyzing a financial data set called, budget_data.csv. The dataset is composed of two columns: Date and Profit/Losses.
+During part one I was tasked with creating a Python script for analyzing a financial data set called *budget_data.csv*. The dataset is composed of two columns: Date and Profit/Losses.
 
 The Python script that analyzes the financial data was supposed to calculate each of the following:
 * The total number of months included in the dataset
@@ -15,7 +15,7 @@ The Python script that analyzes the financial data was supposed to calculate eac
 * In addition, the final script should both print the analysis to the terminal and export a text file with the results.
 
 ### Part II - PyPoll
-During the second part of the challenge I was given a poll dataset called election_data.csv. The dataset was composed of three columns: Voter ID, County, and Candidate. 
+During the second part of the challenge I was given a poll dataset called *election_data.csv*. The dataset was composed of three columns: Voter ID, County, and Candidate. 
 
 The Python script that analyzes the votes was supposed to calculate each of the following:
 * The total number of votes cast
